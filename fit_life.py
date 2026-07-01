@@ -21,7 +21,7 @@ def main():
     user_name = input("Введите ваше имя: ")
 
     try:
-        user_age = int(input("Ввдите ваш возраст: "))
+        user_age = int(input("Введите ваш возраст: "))
         user_weight = float(
             input("Введите ваш вес в килограммах (например 75.5): "))
         user_height = float(
@@ -33,10 +33,11 @@ def main():
     bmi = calculate_bmi(user_weight, user_height)
     water_norm = calculate_water_norm(user_weight)
 
-    print(f"Отчет для пользователя {user_name}, возраст {user_age}")
-    print(f"Ваш Индекс Массы Тела: {bmi}")
-    print(f"Рекомендуемая норма воды: {water_norm} л. в день")
-    print("Расчет окончен. Будьте здоровы!")
+    print(f"Отчет для пользователя {user_name}, возраст {user_age}",
+          f"Ваш Индекс Массы Тела: {bmi}",
+          f"Рекомендуемая норма воды: {water_norm:.1f} л. в день",
+          "Расчет окончен. Будьте здоровы!",
+          sep="\n")
 
 
 if __name__ == "__main__":
